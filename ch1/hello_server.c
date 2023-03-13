@@ -1,9 +1,9 @@
 #include <arpa/inet.h>
-#include <netinet/in.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/socket.h>
+#include <unistd.h>
 
 void error_handling(char *message);
 
@@ -51,6 +51,6 @@ int main(int argc, char *argv[]) {
 
 void error_handling(char *message) {
     fputs(message, stderr);
-    fputs('\n', stderr);
+    fputs("\n", stderr);
     exit(1);
 }
